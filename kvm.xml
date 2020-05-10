@@ -110,12 +110,6 @@
     <controller type="sata" index="0">
       <address type="pci" domain="0x0000" bus="0x00" slot="0x1f" function="0x2"/>
     </controller>
-    <interface type="direct">
-      <mac address="52:54:00:b6:e6:7c"/>
-      <source dev="enp1s0f1" mode="passthrough"/>
-      <model type="e1000e"/>
-      <address type="pci" domain="0x0000" bus="0x01" slot="0x00" function="0x0"/>
-    </interface>
     <input type="mouse" bus="ps2"/>
     <input type="keyboard" bus="ps2"/>
     <hostdev mode="subsystem" type="pci" managed="yes">
@@ -154,6 +148,12 @@
         <address domain="0x0000" bus="0x8d" slot="0x00" function="0x3"/>
       </source>
       <address type="pci" domain="0x0000" bus="0x09" slot="0x00" function="0x0"/>
+    </hostdev>
+    <hostdev mode="subsystem" type="pci" managed="yes">
+      <source>
+        <address domain="0x0000" bus="0x01" slot="0x00" function="0x1"/>
+      </source>
+      <address type="pci" domain="0x0000" bus="0x03" slot="0x00" function="0x0"/>
     </hostdev>
     <memballoon model="virtio">
       <address type="pci" domain="0x0000" bus="0x0a" slot="0x00" function="0x0"/>
